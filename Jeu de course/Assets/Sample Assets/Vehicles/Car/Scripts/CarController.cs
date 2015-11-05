@@ -53,6 +53,8 @@ public class CarController : MonoBehaviour
     [SerializeField] float nitroDecay = 0.5f;                                       // Nitro decay per second of use
     [SerializeField] List<ParticleSystem> nitroParticles = new List<ParticleSystem>();
 
+	public float boostFactor = 1f;
+
     public void AddStylePoints(int nb)
     {
         _stylePoints += nb;
@@ -216,6 +218,8 @@ public class CarController : MonoBehaviour
         {
             float val = maxSpeed;
 
+			val *= boostFactor;
+
             val *= Mathf.Lerp(minHealthMaxSpeedFactor, 1f, health);
             if (useNitro && nitroLeft > 0)
                 val *= nitroMaxSpeedFactor;
@@ -230,6 +234,8 @@ public class CarController : MonoBehaviour
         get
         {
             float val = maxTorque;
+
+			val *= boostFactor;
 
             // val *= Mathf.Lerp(minHealthMaxSpeedFactor, 1f, health);
             if (useNitro && nitroLeft > 0)

@@ -68,7 +68,7 @@ public class CheckpointManager : MonoBehaviour
 
     void OrderCars()
     {
-        var query = _carPositions.OrderByDescending(x => x.Value.lap).ThenByDescending(x => x.Value.checkPoint).ThenBy(x => x.Value.position);
+        var query = _carPositions.OrderByDescending(x => x.Value.lap).ThenByDescending(x => x.Value.checkPoint).ThenByDescending(x => x.Key.GetComponent<WaypointProgressTracker>().GetProgressDist());
         orderedCars.Clear();
         foreach (var car in query)
         {

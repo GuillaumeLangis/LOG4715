@@ -421,7 +421,7 @@ GameObject:
   - 23: {fileID: 15412850}
   m_Layer: 8
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Car_Collider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -658,7 +658,7 @@ GameObject:
   - 23: {fileID: 20029845}
   m_Layer: 8
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Car_Collider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3723,7 +3723,7 @@ GameObject:
   - 23: {fileID: 146986255}
   m_Layer: 8
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Car_Collider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4074,7 +4074,7 @@ GameObject:
   - 23: {fileID: 155447994}
   m_Layer: 8
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Car_Collider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4594,7 +4594,7 @@ GameObject:
   - 23: {fileID: 1616127788}
   m_Layer: 8
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Car_Collider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6123,60 +6123,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1791083872}
   m_GameObject: {fileID: 2141454675}
   m_Mesh: {fileID: 4300000, guid: e6fec471c20b9d148b1f87910e67bea4, type: 3}
---- !u!1 &255498774
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 255498775}
-  - 65: {fileID: 255498777}
-  - 114: {fileID: 255498776}
-  m_Layer: 0
-  m_Name: Checkpoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &255498775
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 255498774}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 243, y: 192, z: 314.600006}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 393890025}
-  m_RootOrder: 3
---- !u!114 &255498776
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 255498774}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fef35bfae1b1a84f8e2ab44582b532c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _manager: {fileID: 557694393}
-  _index: 3
---- !u!65 &255498777
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 255498774}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 100, y: 100, z: 100}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &262655577
 GameObject:
   m_ObjectHideFlags: 0
@@ -6469,6 +6415,18 @@ Prefab:
     - target: {fileID: 11400004, guid: ce87ff1a55e61844fbd4cf92e6653b8f, type: 2}
       propertyPath: carCollisionRelativeVelocityThreshold
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 100028, guid: ce87ff1a55e61844fbd4cf92e6653b8f, type: 2}
+      propertyPath: m_TagString
+      value: Car_Collider
+      objectReference: {fileID: 0}
+    - target: {fileID: 100030, guid: ce87ff1a55e61844fbd4cf92e6653b8f, type: 2}
+      propertyPath: m_TagString
+      value: Car_Collider
+      objectReference: {fileID: 0}
+    - target: {fileID: 100026, guid: ce87ff1a55e61844fbd4cf92e6653b8f, type: 2}
+      propertyPath: m_TagString
+      value: Car_Collider
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce87ff1a55e61844fbd4cf92e6653b8f, type: 2}
@@ -8366,60 +8324,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 2021465002}
   m_GameObject: {fileID: 352903424}
   m_Mesh: {fileID: 4300000, guid: 25712b9d3dd0eb4439390fb8fea8043e, type: 3}
---- !u!1 &359570329
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 359570330}
-  - 65: {fileID: 359570332}
-  - 114: {fileID: 359570331}
-  m_Layer: 0
-  m_Name: Checkpoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &359570330
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 359570329}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 187, y: 192, z: 260.100006}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 393890025}
-  m_RootOrder: 4
---- !u!114 &359570331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 359570329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fef35bfae1b1a84f8e2ab44582b532c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _manager: {fileID: 557694393}
-  _index: 4
---- !u!65 &359570332
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 359570329}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 100, y: 100, z: 100}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &365871982
 GameObject:
   m_ObjectHideFlags: 0
@@ -8768,7 +8672,7 @@ GameObject:
   - 23: {fileID: 387808570}
   m_Layer: 8
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Car_Collider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8929,21 +8833,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 636401175}
-  - {fileID: 2038743358}
-  - {fileID: 780347014}
-  - {fileID: 255498775}
-  - {fileID: 359570330}
-  - {fileID: 1593903089}
   - {fileID: 949470371}
-  - {fileID: 498999112}
-  - {fileID: 841510755}
-  - {fileID: 2123934169}
-  - {fileID: 873614728}
-  - {fileID: 1974657898}
   - {fileID: 796680442}
-  - {fileID: 500904600}
-  - {fileID: 1836768564}
-  - {fileID: 695276930}
   m_Father: {fileID: 0}
   m_RootOrder: 5
 --- !u!1 &394131511
@@ -8959,7 +8850,7 @@ GameObject:
   - 23: {fileID: 394131513}
   m_Layer: 8
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Car_Collider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10348,6 +10239,7 @@ MonoBehaviour:
   - {fileID: 20224616}
   - {fileID: 2033435282}
   - {fileID: 2064331811}
+  boostFactor: 1
   invulnerable: 0
   _health: 1
   minHealthMaxSpeedFactor: .5
@@ -10698,114 +10590,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 2021465002}
   m_GameObject: {fileID: 495053144}
   m_Mesh: {fileID: 4300000, guid: 25712b9d3dd0eb4439390fb8fea8043e, type: 3}
---- !u!1 &498999109
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 498999112}
-  - 65: {fileID: 498999111}
-  - 114: {fileID: 498999110}
-  m_Layer: 0
-  m_Name: Checkpoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &498999110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 498999109}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fef35bfae1b1a84f8e2ab44582b532c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _manager: {fileID: 557694393}
-  _index: 7
---- !u!65 &498999111
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 498999109}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 100, y: 100, z: 100}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!4 &498999112
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 498999109}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22, y: 192, z: 334}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 393890025}
-  m_RootOrder: 7
---- !u!1 &500904599
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 500904600}
-  - 65: {fileID: 500904602}
-  - 114: {fileID: 500904601}
-  m_Layer: 0
-  m_Name: Checkpoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &500904600
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 500904599}
-  m_LocalRotation: {x: 0, y: -.18810986, z: 0, w: .982148051}
-  m_LocalPosition: {x: 293, y: 192, z: 96.6999969}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 393890025}
-  m_RootOrder: 13
---- !u!114 &500904601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 500904599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fef35bfae1b1a84f8e2ab44582b532c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _manager: {fileID: 557694393}
-  _index: 13
---- !u!65 &500904602
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 500904599}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 100, y: 100, z: 114.454102}
-  m_Center: {x: 1.37806137e-05, y: 0, z: 7.22697544}
 --- !u!1 &507999649
 GameObject:
   m_ObjectHideFlags: 0
@@ -11408,6 +11192,77 @@ MonoBehaviour:
   checkPointRoot: {fileID: 393890025}
   _totalLaps: 3
   orderedCars: []
+--- !u!1 &559370839
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 559370840}
+  - 65: {fileID: 559370843}
+  - 114: {fileID: 559370842}
+  - 54: {fileID: 559370841}
+  m_Layer: 0
+  m_Name: Bonus
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &559370840
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 559370839}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 389.801178, y: 191.784973, z: 331.657104}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2047550982}
+  m_RootOrder: 7
+--- !u!54 &559370841
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 559370839}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!114 &559370842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 559370839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce982b09f5fec024bb0c0f2e1640dacb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactFX: {fileID: 100720, guid: 85d9bf8df6e86264890452bbdcbddd86, type: 2}
+  multiplier: 4
+  currentCars: []
+--- !u!65 &559370843
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 559370839}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 100, y: 100, z: 100}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &561691734
 GameObject:
   m_ObjectHideFlags: 0
@@ -13154,7 +13009,7 @@ GameObject:
   - 23: {fileID: 619919297}
   m_Layer: 8
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Car_Collider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13903,7 +13758,7 @@ GameObject:
   - 23: {fileID: 652447580}
   m_Layer: 8
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Car_Collider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14715,60 +14570,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
---- !u!1 &695276929
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 695276930}
-  - 65: {fileID: 695276932}
-  - 114: {fileID: 695276931}
-  m_Layer: 0
-  m_Name: Checkpoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &695276930
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 695276929}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 384, y: 192, z: 214.100006}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 393890025}
-  m_RootOrder: 15
---- !u!114 &695276931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 695276929}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fef35bfae1b1a84f8e2ab44582b532c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _manager: {fileID: 557694393}
-  _index: 15
---- !u!65 &695276932
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 695276929}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 72.4049835, y: 100, z: 100}
-  m_Center: {x: 4.96948242, y: 0, z: 0}
 --- !u!1 &697822389
 GameObject:
   m_ObjectHideFlags: 0
@@ -15269,7 +15070,7 @@ GameObject:
   - 23: {fileID: 758540634}
   m_Layer: 8
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Car_Collider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16734,60 +16535,6 @@ ParticleSystemRenderer:
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
---- !u!1 &780347013
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 780347014}
-  - 65: {fileID: 780347016}
-  - 114: {fileID: 780347015}
-  m_Layer: 0
-  m_Name: Checkpoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &780347014
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 780347013}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 292, y: 192, z: 370}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 393890025}
-  m_RootOrder: 2
---- !u!114 &780347015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 780347013}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fef35bfae1b1a84f8e2ab44582b532c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _manager: {fileID: 557694393}
-  _index: 2
---- !u!65 &780347016
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 780347013}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 100, y: 100, z: 100}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &792203866
 GameObject:
   m_ObjectHideFlags: 0
@@ -16888,7 +16635,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 393890025}
-  m_RootOrder: 12
+  m_RootOrder: 2
 --- !u!65 &796680443
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20227,6 +19974,18 @@ Prefab:
       propertyPath: carCollisionRelativeVelocityThreshold
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 100026, guid: ce87ff1a55e61844fbd4cf92e6653b8f, type: 2}
+      propertyPath: m_TagString
+      value: Car_Collider
+      objectReference: {fileID: 0}
+    - target: {fileID: 100028, guid: ce87ff1a55e61844fbd4cf92e6653b8f, type: 2}
+      propertyPath: m_TagString
+      value: Car_Collider
+      objectReference: {fileID: 0}
+    - target: {fileID: 100030, guid: ce87ff1a55e61844fbd4cf92e6653b8f, type: 2}
+      propertyPath: m_TagString
+      value: Car_Collider
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce87ff1a55e61844fbd4cf92e6653b8f, type: 2}
   m_RootGameObject: {fileID: 2042105150}
@@ -20296,60 +20055,6 @@ MonoBehaviour:
     - {fileID: 1694140257}
   smoothRoute: 1
   editorVisualisationSubsteps: 100
---- !u!1 &841510754
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 841510755}
-  - 65: {fileID: 841510757}
-  - 114: {fileID: 841510756}
-  m_Layer: 0
-  m_Name: Checkpoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &841510755
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 841510754}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28.1000004, y: 192, z: 244}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 393890025}
-  m_RootOrder: 8
---- !u!114 &841510756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 841510754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fef35bfae1b1a84f8e2ab44582b532c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _manager: {fileID: 557694393}
-  _index: 8
---- !u!65 &841510757
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 841510754}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 100, y: 100, z: 100}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &847852856
 GameObject:
   m_ObjectHideFlags: 0
@@ -21802,60 +21507,6 @@ Prefab:
   m_RootGameObject: {fileID: 1971511312}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!1 &873614727
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 873614728}
-  - 65: {fileID: 873614730}
-  - 114: {fileID: 873614729}
-  m_Layer: 0
-  m_Name: Checkpoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &873614728
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 873614727}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.2000122, y: 192, z: 104.599998}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 393890025}
-  m_RootOrder: 10
---- !u!114 &873614729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 873614727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fef35bfae1b1a84f8e2ab44582b532c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _manager: {fileID: 557694393}
-  _index: 10
---- !u!65 &873614730
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 873614727}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 100, y: 100, z: 100}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &885623336
 GameObject:
   m_ObjectHideFlags: 0
@@ -23340,7 +22991,7 @@ GameObject:
   - 23: {fileID: 917747849}
   m_Layer: 8
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Car_Collider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23536,7 +23187,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 393890025}
-  m_RootOrder: 6
+  m_RootOrder: 1
 --- !u!65 &949470372
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23709,7 +23360,7 @@ GameObject:
   - 23: {fileID: 959888862}
   m_Layer: 8
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Car_Collider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24272,6 +23923,7 @@ MonoBehaviour:
   nitroRegenPassive: .0500000007
   nitroDecay: .5
   nitroParticles: []
+  boostFactor: 1
   invulnerable: 0
   _health: 1
   minHealthMaxSpeedFactor: .5
@@ -25487,7 +25139,7 @@ GameObject:
   - 23: {fileID: 1068297732}
   m_Layer: 8
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Car_Collider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27771,7 +27423,7 @@ GameObject:
   - 23: {fileID: 1192968015}
   m_Layer: 8
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Car_Collider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28063,7 +27715,7 @@ GameObject:
   - 23: {fileID: 1203657148}
   m_Layer: 8
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Car_Collider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32946,6 +32598,7 @@ MonoBehaviour:
   nitroRegenPassive: .0500000007
   nitroDecay: .5
   nitroParticles: []
+  boostFactor: 1
   invulnerable: 0
   _health: 1
   minHealthMaxSpeedFactor: .5
@@ -33824,6 +33477,18 @@ Prefab:
       propertyPath: carCollisionRelativeVelocityThreshold
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 2}
+      propertyPath: m_TagString
+      value: Car_Collider
+      objectReference: {fileID: 0}
+    - target: {fileID: 100034, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 2}
+      propertyPath: m_TagString
+      value: Car_Collider
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 2}
+      propertyPath: m_TagString
+      value: Car_Collider
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 2}
   m_RootGameObject: {fileID: 481286549}
@@ -33842,7 +33507,7 @@ GameObject:
   - 23: {fileID: 1438518266}
   m_Layer: 8
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Car_Collider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34170,7 +33835,7 @@ GameObject:
   - 23: {fileID: 1477828580}
   m_Layer: 8
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Car_Collider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34756,7 +34421,7 @@ GameObject:
   - 23: {fileID: 1510053339}
   m_Layer: 8
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Car_Collider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35108,7 +34773,7 @@ GameObject:
   - 23: {fileID: 1520312601}
   m_Layer: 8
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Car_Collider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36122,60 +35787,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 2103526709}
   m_GameObject: {fileID: 1591936144}
   m_Mesh: {fileID: 4300000, guid: b5290684820a94548bedb95083785116, type: 3}
---- !u!1 &1593903088
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1593903089}
-  - 65: {fileID: 1593903091}
-  - 114: {fileID: 1593903090}
-  m_Layer: 0
-  m_Name: Checkpoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1593903089
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1593903088}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 102.899994, y: 192, z: 236.199997}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 393890025}
-  m_RootOrder: 5
---- !u!114 &1593903090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1593903088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fef35bfae1b1a84f8e2ab44582b532c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _manager: {fileID: 557694393}
-  _index: 5
---- !u!65 &1593903091
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1593903088}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 100, y: 100, z: 100}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1598675794
 GameObject:
   m_ObjectHideFlags: 0
@@ -36372,7 +35983,7 @@ GameObject:
   - 23: {fileID: 2072621873}
   m_Layer: 8
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Car_Collider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36866,6 +36477,7 @@ MonoBehaviour:
   nitroRegenPassive: .0500000007
   nitroDecay: .5
   nitroParticles: []
+  boostFactor: 1
   invulnerable: 0
   _health: 1
   minHealthMaxSpeedFactor: .5
@@ -37111,7 +36723,7 @@ GameObject:
   - 23: {fileID: 1636282844}
   m_Layer: 8
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Car_Collider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37984,6 +37596,18 @@ Prefab:
     - target: {fileID: 11400004, guid: ce87ff1a55e61844fbd4cf92e6653b8f, type: 2}
       propertyPath: carCollisionRelativeVelocityThreshold
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 100030, guid: ce87ff1a55e61844fbd4cf92e6653b8f, type: 2}
+      propertyPath: m_TagString
+      value: Car_Collider
+      objectReference: {fileID: 0}
+    - target: {fileID: 100028, guid: ce87ff1a55e61844fbd4cf92e6653b8f, type: 2}
+      propertyPath: m_TagString
+      value: Car_Collider
+      objectReference: {fileID: 0}
+    - target: {fileID: 100026, guid: ce87ff1a55e61844fbd4cf92e6653b8f, type: 2}
+      propertyPath: m_TagString
+      value: Car_Collider
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce87ff1a55e61844fbd4cf92e6653b8f, type: 2}
@@ -39170,6 +38794,18 @@ Prefab:
       propertyPath: carCollisionRelativeVelocityThreshold
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 100026, guid: ce87ff1a55e61844fbd4cf92e6653b8f, type: 2}
+      propertyPath: m_TagString
+      value: Car_Collider
+      objectReference: {fileID: 0}
+    - target: {fileID: 100030, guid: ce87ff1a55e61844fbd4cf92e6653b8f, type: 2}
+      propertyPath: m_TagString
+      value: Car_Collider
+      objectReference: {fileID: 0}
+    - target: {fileID: 100028, guid: ce87ff1a55e61844fbd4cf92e6653b8f, type: 2}
+      propertyPath: m_TagString
+      value: Car_Collider
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce87ff1a55e61844fbd4cf92e6653b8f, type: 2}
   m_RootGameObject: {fileID: 981142452}
@@ -39709,7 +39345,7 @@ GameObject:
   - 23: {fileID: 1825979790}
   m_Layer: 8
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Car_Collider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39829,60 +39465,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1081266466}
   m_RootOrder: 1
---- !u!1 &1836768563
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1836768564}
-  - 65: {fileID: 1836768566}
-  - 114: {fileID: 1836768565}
-  m_Layer: 0
-  m_Name: Checkpoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1836768564
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1836768563}
-  m_LocalRotation: {x: 0, y: -.258224875, z: 0, w: .966084898}
-  m_LocalPosition: {x: 378.600006, y: 192, z: 137.699997}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 393890025}
-  m_RootOrder: 14
---- !u!114 &1836768565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1836768563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fef35bfae1b1a84f8e2ab44582b532c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _manager: {fileID: 557694393}
-  _index: 14
---- !u!65 &1836768566
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1836768563}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 100, y: 100, z: 100}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1842007919
 GameObject:
   m_ObjectHideFlags: 0
@@ -40847,6 +40429,7 @@ MonoBehaviour:
   nitroRegenPassive: .0500000007
   nitroDecay: .5
   nitroParticles: []
+  boostFactor: 1
   invulnerable: 0
   _health: 1
   minHealthMaxSpeedFactor: .5
@@ -43466,60 +43049,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.99999881, y: 8, z: 1.99999976}
   m_Center: {x: 6.2584877e-07, y: 4, z: 1.49011612e-07}
---- !u!1 &1974657897
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1974657898}
-  - 65: {fileID: 1974657900}
-  - 114: {fileID: 1974657899}
-  m_Layer: 0
-  m_Name: Checkpoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1974657898
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1974657897}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 82.5, y: 192, z: 102}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 393890025}
-  m_RootOrder: 11
---- !u!114 &1974657899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1974657897}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fef35bfae1b1a84f8e2ab44582b532c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _manager: {fileID: 557694393}
-  _index: 11
---- !u!65 &1974657900
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1974657897}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 100, y: 100, z: 100}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1975245199
 GameObject:
   m_ObjectHideFlags: 0
@@ -43609,6 +43138,7 @@ GameObject:
   - 114: {fileID: 1977983685}
   - 114: {fileID: 1977983692}
   - 114: {fileID: 1977983689}
+  - 114: {fileID: 1977983693}
   m_Layer: 8
   m_Name: Joueur 2
   m_TagString: Player
@@ -43776,6 +43306,7 @@ MonoBehaviour:
   - {fileID: 590601892}
   - {fileID: 851037967}
   - {fileID: 780246736}
+  boostFactor: 1
   invulnerable: 0
   _health: 1
   minHealthMaxSpeedFactor: .5
@@ -43817,6 +43348,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vertical: Vertical
   horizontal: Horizontal
+--- !u!114 &1977983693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1977983683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5cb22d331ef7d64796f917c6a455a32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  circuit: {fileID: 838770462}
+  lookAheadForTargetOffset: 15
+  lookAheadForTargetFactor: .100000001
+  lookAheadForSpeedOffset: 10
+  lookAheadForSpeedFactor: .200000003
+  progressStyle: 0
+  pointToPointThreshold: .200000003
+  target: {fileID: 0}
+  resetOnStart: 1
 --- !u!1 &1988760123
 GameObject:
   m_ObjectHideFlags: 0
@@ -46070,60 +45621,6 @@ Transform:
   - {fileID: 1541909794}
   m_Father: {fileID: 481286550}
   m_RootOrder: 0
---- !u!1 &2038743357
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 2038743358}
-  - 65: {fileID: 2038743360}
-  - 114: {fileID: 2038743359}
-  m_Layer: 0
-  m_Name: Checkpoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2038743358
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2038743357}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 357, y: 192, z: 417}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 393890025}
-  m_RootOrder: 1
---- !u!114 &2038743359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2038743357}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fef35bfae1b1a84f8e2ab44582b532c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _manager: {fileID: 557694393}
-  _index: 1
---- !u!65 &2038743360
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2038743357}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 100, y: 100, z: 100}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2039030384
 GameObject:
   m_ObjectHideFlags: 0
@@ -46322,6 +45819,7 @@ MonoBehaviour:
   nitroRegenPassive: .0500000007
   nitroDecay: .5
   nitroParticles: []
+  boostFactor: 1
   invulnerable: 0
   _health: 1
   minHealthMaxSpeedFactor: .5
@@ -46499,6 +45997,7 @@ Transform:
   - {fileID: 691674701}
   - {fileID: 1256335154}
   - {fileID: 2123269359}
+  - {fileID: 559370840}
   m_Father: {fileID: 0}
   m_RootOrder: 2
 --- !u!1001 &2049109060
@@ -46607,6 +46106,18 @@ Prefab:
     - target: {fileID: 11400030, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 2}
       propertyPath: carCollisionRelativeVelocityThreshold
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 2}
+      propertyPath: m_TagString
+      value: Car_Collider
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 2}
+      propertyPath: m_TagString
+      value: Car_Collider
+      objectReference: {fileID: 0}
+    - target: {fileID: 100034, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 2}
+      propertyPath: m_TagString
+      value: Car_Collider
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -48060,7 +47571,7 @@ GameObject:
   - 23: {fileID: 207475165}
   m_Layer: 8
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Car_Collider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48478,6 +47989,7 @@ MonoBehaviour:
   nitroRegenPassive: .0500000007
   nitroDecay: .5
   nitroParticles: []
+  boostFactor: 1
   invulnerable: 0
   _health: 1
   minHealthMaxSpeedFactor: .5
@@ -48891,6 +48403,18 @@ Prefab:
       propertyPath: carCollisionRelativeVelocityThreshold
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 100028, guid: ce87ff1a55e61844fbd4cf92e6653b8f, type: 2}
+      propertyPath: m_TagString
+      value: Car_Collider
+      objectReference: {fileID: 0}
+    - target: {fileID: 100030, guid: ce87ff1a55e61844fbd4cf92e6653b8f, type: 2}
+      propertyPath: m_TagString
+      value: Car_Collider
+      objectReference: {fileID: 0}
+    - target: {fileID: 100026, guid: ce87ff1a55e61844fbd4cf92e6653b8f, type: 2}
+      propertyPath: m_TagString
+      value: Car_Collider
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce87ff1a55e61844fbd4cf92e6653b8f, type: 2}
   m_RootGameObject: {fileID: 1368033979}
@@ -49108,60 +48632,6 @@ Transform:
   - {fileID: 1902070721}
   m_Father: {fileID: 2047550982}
   m_RootOrder: 6
---- !u!1 &2123934168
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 2123934169}
-  - 65: {fileID: 2123934171}
-  - 114: {fileID: 2123934170}
-  m_Layer: 0
-  m_Name: Checkpoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2123934169
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2123934168}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -33.0999985, y: 192, z: 175}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 393890025}
-  m_RootOrder: 9
---- !u!114 &2123934170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2123934168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fef35bfae1b1a84f8e2ab44582b532c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _manager: {fileID: 557694393}
-  _index: 9
---- !u!65 &2123934171
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2123934168}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 100, y: 100, z: 100}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2124341988
 GameObject:
   m_ObjectHideFlags: 0
@@ -49320,7 +48790,7 @@ GameObject:
   - 23: {fileID: 2128274912}
   m_Layer: 8
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: Car_Collider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49674,6 +49144,18 @@ Prefab:
     - target: {fileID: 11400004, guid: ce87ff1a55e61844fbd4cf92e6653b8f, type: 2}
       propertyPath: carCollisionRelativeVelocityThreshold
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 100030, guid: ce87ff1a55e61844fbd4cf92e6653b8f, type: 2}
+      propertyPath: m_TagString
+      value: Car_Collider
+      objectReference: {fileID: 0}
+    - target: {fileID: 100026, guid: ce87ff1a55e61844fbd4cf92e6653b8f, type: 2}
+      propertyPath: m_TagString
+      value: Car_Collider
+      objectReference: {fileID: 0}
+    - target: {fileID: 100028, guid: ce87ff1a55e61844fbd4cf92e6653b8f, type: 2}
+      propertyPath: m_TagString
+      value: Car_Collider
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ce87ff1a55e61844fbd4cf92e6653b8f, type: 2}
