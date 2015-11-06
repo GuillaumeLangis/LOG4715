@@ -29,6 +29,8 @@ public class CarController : MonoBehaviour
     [SerializeField] private Advanced advanced;                                     // container for the advanced setting which will expose as a foldout in the inspector
     [SerializeField] bool preserveDirectionWhileInAir = false;                      // flag for if the direction of travel to be preserved in the air (helps cars land in the right direction if doing huge jumps!)
 
+	[SerializeField] private float airRotationSpeed = 200;
+
     [Header("Style Points")]
     [SerializeField] int _stylePoints = 0;                                          // Number of style points on this car
     public int stylePoints
@@ -244,8 +246,7 @@ public class CarController : MonoBehaviour
             return val;
         }
     }
-
-
+	
     public float BurnoutSlipEffect
     {
         get { return advanced.burnoutSlipEffect; }
@@ -275,6 +276,7 @@ public class CarController : MonoBehaviour
         get { return maxSteerAngle; }
     }
     
+
 
 	// variables added due to separating out things into functions!
 	bool anyOnGround;
@@ -349,6 +351,23 @@ public class CarController : MonoBehaviour
         }
 
         _health = Mathf.Clamp(health + healthRegenPassive * Time.deltaTime, 0, 1f);
+
+
+		if (!anyOnGround) 
+		{
+			Quaternion rotationMatrix = Quaternion.identity;
+			float roll = 0;
+			float pitch = 0;
+			float yaw = 0;
+
+			roll = Input.GetAxis("Roll") * (Time.deltaTime * airRotationSpeed);
+			pitch = Input.GetAxis("Pitch") * (Time.deltaTime * airRotationSpeed);
+			yaw = Input.GetAxis("Yaw") * (Time.deltaTime * airRotationSpeed);
+
+			rotationMatrix.eulerAngles = new Vector3(-pitch, yaw, -roll);
+		
+			rigidbody.rotation *= rotationMatrix;
+		}
     }
     void FixedUpdate()
     {
