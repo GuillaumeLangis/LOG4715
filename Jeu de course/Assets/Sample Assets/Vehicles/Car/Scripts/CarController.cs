@@ -30,6 +30,7 @@ public class CarController : MonoBehaviour
     [SerializeField] bool preserveDirectionWhileInAir = false;                      // flag for if the direction of travel to be preserved in the air (helps cars land in the right direction if doing huge jumps!)
 
 	[SerializeField] private float airRotationSpeed = 200;
+	[SerializeField] private float rubberbandMultiplier = 1.0f;
 
     [Header("Style Points")]
     [SerializeField] int _stylePoints = 0;                                          // Number of style points on this car
@@ -410,7 +411,7 @@ public class CarController : MonoBehaviour
 		if (accelBrakeInput > 0) {
 			if (CurrentSpeed > -smallSpeed) {
 				// pressing forward while moving forward : accelerate!
-				targetAccelInput = accelBrakeInput;
+				targetAccelInput = accelBrakeInput * CalculateRubberBanding();
 				BrakeInput = 0;
 			}
 			else {
@@ -443,6 +444,24 @@ public class CarController : MonoBehaviour
 		// speedfactor is a normalized representation of speed in relation to max speed:
 		SpeedFactor = Mathf.InverseLerp (0, reversing ? maxReversingSpeed : MaxSpeed, Mathf.Abs (CurrentSpeed));
 		curvedSpeedFactor = reversing ? 0 : CurveFactor (SpeedFactor);
+	}
+
+	float CalculateRubberBanding()
+	{
+		CarController nextCar = checkpointManager.GetNextCar (this); 
+
+		if (nextCar) 
+		{ 			
+			float distanceToNextCar = Vector3.Distance (rigidbody.worldCenterOfMass, nextCar.rigidbody.worldCenterOfMass);
+			Debug.Log (distanceToNextCar.ToString());
+
+			if(distanceToNextCar < 1000)
+				return 1.0f + distanceToNextCar/2000;
+
+			else return 1.5f;
+		}
+
+		return 1.0f;
 	}
 
 	void HandleGearChanging ()
