@@ -18,6 +18,12 @@ public class PowerUpController : MonoBehaviour
 	[SerializeField] private float timeToRespawn = 5;
 	private bool isTrigger = true;
 
+    [SerializeField] GameObject powerupFX;
+
+    [SerializeField] Projectile projGreen;
+    [SerializeField] Projectile projRed;
+    [SerializeField] Projectile projBlue;
+
 	public PowerUpController ()
 	{
 		powerUps.Add ("reparation");
@@ -32,24 +38,30 @@ public class PowerUpController : MonoBehaviour
 			if (other.gameObject.CompareTag ("Car_Collider")) {
 				CarController car = other.GetComponentInParent<CarController> ();
 
-				//int n = Random.Range (0, powerUps.Count);
-				int n = 0;
+				int n = Random.Range (0, powerUps.Count);
+				// int n = 0;
 				switch (powerUps [n]) {
 				case "reparation":
 					car.Repair (1f);
 					break;
 				case "projRouge":
-					//car.projectilePrefab.projectileType = Projectile.ProjType.Red;
+                    car.projectilePrefab = projRed;
 					break;
 				case "projVert":
-					//car.projectilePrefab.projectileType = Projectile.ProjType.Green;
+					car.projectilePrefab = projGreen;
 					break;
 				case "projBleu":
-					//car.projectilePrefab.projectileType = Projectile.ProjType.Blue;
+					car.projectilePrefab = projBlue;
 					break;
 				default:
 					break;
 				}
+
+                if (powerupFX)
+                {
+                    GameObject fx = Instantiate(powerupFX, transform.position, transform.rotation) as GameObject;
+                    Destroy(fx, 20f);
+                }
 
 				isTrigger = false;
 				gameObject.GetComponent<Renderer> ().material.color = Color.red;

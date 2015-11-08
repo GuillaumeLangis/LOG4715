@@ -11,6 +11,9 @@ public class CarUserControlMP : MonoBehaviour
 	[SerializeField]
 	private string horizontal = "Horizontal";
 
+    [SerializeField]
+    private string roll = "Roll";
+
     bool jump = false;
 	
 	void Awake ()
@@ -36,6 +39,7 @@ public class CarUserControlMP : MonoBehaviour
 		#if CROSS_PLATFORM_INPUT
 		float h = CrossPlatformInput.GetAxis(horizontal);
 		float v = CrossPlatformInput.GetAxis(vertical);
+        float r = CrossPlatformInput.GetAxis(roll);
         car.useNitro = CrossPlatformInput.GetButton("Fire2");
         if (jump)
         {
@@ -46,6 +50,6 @@ public class CarUserControlMP : MonoBehaviour
 		float h = Input.GetAxis(horizontal);
 		float v = Input.GetAxis(vertical);
         #endif
-        car.Move(h,v);
+        car.Move(h,v,r);
 	}
 }

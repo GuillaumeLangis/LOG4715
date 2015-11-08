@@ -124,7 +124,7 @@ public class CarController : MonoBehaviour
                     proj.target = nextcar;
 
                     // Clear the prefab so no projectile can be launched
-                   // projectilePrefab = null;
+                    projectilePrefab = null;
                 }
                 else Debug.LogWarning("CANNOT LAUNCH RED SHELL - FIRST IN LINE");
             }
@@ -313,7 +313,7 @@ public class CarController : MonoBehaviour
 	}
 
 
-	public void Move (float steerInput, float accelBrakeInput)
+	public void Move (float steerInput, float accelBrakeInput, float rollInput = 0)
     {
 
 		// lose control of engine if immobilized
@@ -328,7 +328,24 @@ public class CarController : MonoBehaviour
 		CalculateRevs();
 		PreserveDirectionInAir();
 
-	}
+        // Air control
+        if (!anyOnGround)
+        {
+            Quaternion rotationMatrix = Quaternion.identity;
+            float roll = 0;
+            float pitch = 0;
+            float yaw = 0;
+
+            roll = rollInput * (Time.deltaTime * airRotationSpeed);
+            pitch = accelBrakeInput * (Time.deltaTime * airRotationSpeed);
+            yaw = steerInput * (Time.deltaTime * airRotationSpeed);
+
+            rotationMatrix.eulerAngles = new Vector3(-pitch, yaw, -roll);
+
+            rigidbody.rotation *= rotationMatrix;
+        }
+
+    }
     
     void Update()
     {
@@ -351,23 +368,6 @@ public class CarController : MonoBehaviour
         }
 
         _health = Mathf.Clamp(health + healthRegenPassive * Time.deltaTime, 0, 1f);
-
-
-		if (!anyOnGround) 
-		{
-			Quaternion rotationMatrix = Quaternion.identity;
-			float roll = 0;
-			float pitch = 0;
-			float yaw = 0;
-
-			roll = Input.GetAxis("Roll") * (Time.deltaTime * airRotationSpeed);
-			pitch = Input.GetAxis("Pitch") * (Time.deltaTime * airRotationSpeed);
-			yaw = Input.GetAxis("Yaw") * (Time.deltaTime * airRotationSpeed);
-
-			rotationMatrix.eulerAngles = new Vector3(-pitch, yaw, -roll);
-		
-			rigidbody.rotation *= rotationMatrix;
-		}
     }
     void FixedUpdate()
     {
