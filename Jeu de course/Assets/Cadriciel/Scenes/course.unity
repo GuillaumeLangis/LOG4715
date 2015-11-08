@@ -10249,7 +10249,7 @@ MonoBehaviour:
   carCollisionRelativeVelocityThreshold: 15
   launchPt: {fileID: 1550942331}
   projCircuit: {fileID: 838770462}
-  projectilePrefab: {fileID: 11432844, guid: 5a92a0c569abc984b971f4fe8b5c7698, type: 2}
+  projectilePrefab: {fileID: 11470040, guid: b079cd0645730c14d8d45587b9f7b6d9, type: 2}
   checkpointManager: {fileID: 0}
   jumpForce: 1000
 --- !u!114 &481286552
@@ -13884,7 +13884,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 93e86b57e56570d46814839867bf9a52, type: 2}
   m_PrefabInternal: {fileID: 2060062350}
   m_GameObject: {fileID: 654103632}
-  m_LocalRotation: {x: -4.68113939e-08, y: .818397224, z: -6.66669777e-08, w: -.574652851}
+  m_LocalRotation: {x: -4.6811401e-08, y: .818397343, z: -6.66669848e-08, w: -.57465291}
   m_LocalPosition: {x: -148.522217, y: 67.962326, z: 104.664223}
   m_LocalScale: {x: 11.0254927, y: 1, z: 1}
   m_Children: []
@@ -24648,6 +24648,7 @@ GameObject:
   - 23: {fileID: 1052194671}
   - 65: {fileID: 1052194673}
   - 65: {fileID: 1052194670}
+  - 114: {fileID: 1052194674}
   m_Layer: 12
   m_Name: Pillar 2x8x2
   m_TagString: Untagged
@@ -24721,6 +24722,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.99999881, y: 8, z: 1.99999976}
   m_Center: {x: 6.2584877e-07, y: 4, z: 1.49011612e-07}
+--- !u!114 &1052194674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1052194668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7549089b785b7b3459562876c47929ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 1
 --- !u!1 &1052350985
 GameObject:
   m_ObjectHideFlags: 0
@@ -27002,6 +27015,18 @@ Prefab:
     - target: {fileID: 100000, guid: 44884af1ac1d64d42902da40268ba120, type: 2}
       propertyPath: m_Layer
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 44884af1ac1d64d42902da40268ba120, type: 2}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: 44884af1ac1d64d42902da40268ba120, type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 44884af1ac1d64d42902da40268ba120, type: 2}
+      propertyPath: m_UseLightProbes
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 44884af1ac1d64d42902da40268ba120, type: 2}
@@ -33462,7 +33487,7 @@ Prefab:
     - target: {fileID: 11400030, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 2}
       propertyPath: projectilePrefab
       value: 
-      objectReference: {fileID: 11432844, guid: 5a92a0c569abc984b971f4fe8b5c7698,
+      objectReference: {fileID: 11470040, guid: b079cd0645730c14d8d45587b9f7b6d9,
         type: 2}
     - target: {fileID: 11400030, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 2}
       propertyPath: projCircuit
@@ -33491,6 +33516,10 @@ Prefab:
     - target: {fileID: 100002, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 2}
       propertyPath: m_TagString
       value: Car_Collider
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400030, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 2}
+      propertyPath: _health
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0e7ee4df08df88c4880f43398f9ad2c2, type: 2}
@@ -34275,6 +34304,10 @@ Prefab:
     - target: {fileID: 100000, guid: 44884af1ac1d64d42902da40268ba120, type: 2}
       propertyPath: m_Layer
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 44884af1ac1d64d42902da40268ba120, type: 2}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 44884af1ac1d64d42902da40268ba120, type: 2}
@@ -38854,6 +38887,7 @@ GameObject:
   - 23: {fileID: 1804739141}
   - 65: {fileID: 1804739143}
   - 65: {fileID: 1804739140}
+  - 114: {fileID: 1804739144}
   m_Layer: 12
   m_Name: Pillar 2x8x2
   m_TagString: Untagged
@@ -38927,6 +38961,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.99999881, y: 8, z: 1.99999976}
   m_Center: {x: 6.2584877e-07, y: 4, z: 1.49011612e-07}
+--- !u!114 &1804739144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1804739138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7549089b785b7b3459562876c47929ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 1
 --- !u!1 &1806963580
 GameObject:
   m_ObjectHideFlags: 0
@@ -42981,9 +43027,10 @@ GameObject:
   - 23: {fileID: 1972544823}
   - 65: {fileID: 1972544825}
   - 65: {fileID: 1972544822}
+  - 114: {fileID: 1972544826}
   m_Layer: 12
   m_Name: Pillar 2x8x2
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43054,6 +43101,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.99999881, y: 8, z: 1.99999976}
   m_Center: {x: 6.2584877e-07, y: 4, z: 1.49011612e-07}
+--- !u!114 &1972544826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1972544820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7549089b785b7b3459562876c47929ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 1
 --- !u!1 &1975245199
 GameObject:
   m_ObjectHideFlags: 0
@@ -47825,6 +47884,7 @@ GameObject:
   - 23: {fileID: 2090683122}
   - 65: {fileID: 2090683124}
   - 65: {fileID: 2090683121}
+  - 114: {fileID: 2090683125}
   m_Layer: 12
   m_Name: Pillar 2x8x2
   m_TagString: Untagged
@@ -47898,6 +47958,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.99999881, y: 8, z: 1.99999976}
   m_Center: {x: 6.2584877e-07, y: 4, z: 1.49011612e-07}
+--- !u!114 &2090683125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2090683119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7549089b785b7b3459562876c47929ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 1
 --- !u!1 &2099699816
 GameObject:
   m_ObjectHideFlags: 0

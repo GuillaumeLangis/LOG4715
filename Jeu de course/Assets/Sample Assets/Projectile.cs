@@ -87,53 +87,51 @@ public class Projectile : MonoBehaviour {
     void OnCollisionEnter(Collision col)
     {
         CarController car = col.gameObject.GetComponentInParent<CarController>();
-        if (car)
-        {
-            switch (projectileType)
-            {
-                case ProjType.Green:
-                    car.Damage(damage);
-                    car.rigidbody.AddForce((Random.onUnitSphere + Vector3.up * 1.5f).normalized * force);
-                    Destroy(gameObject);
-                    if (deathPrefab)
-                    {
-                        var fx = Instantiate(deathPrefab, transform.position, transform.rotation);
-                        Destroy(fx, 20f);
-                    }
-                    break;
-                case ProjType.Red:
-                    if (car != source)
-                    {
-                        car.Damage(damage);
-                        car.rigidbody.AddForce((Random.onUnitSphere + Vector3.up * 1.5f).normalized * force);
-                        Destroy(gameObject);
-                        if (deathPrefab)
-                        {
-                            var fx = Instantiate(deathPrefab, transform.position, transform.rotation);
-                            Destroy(fx, 20f);
-                        }
-                    }
-                    break;
-                case ProjType.Blue:
-                    if (car != source)
-                    {
-                        car.Damage(damage);
-                        car.rigidbody.AddForce((Random.onUnitSphere + Vector3.up * 1.5f).normalized * force);
-                        if (car == target)
-                        {
-                            Destroy(gameObject);
-                        }
-                        if (deathPrefab)
-                        {
-                            var fx = Instantiate(deathPrefab, transform.position, transform.rotation);
-                            Destroy(fx, 20f);
-                        }
-                    }
-                    break;
-                default:
-                    break;
-            }
-        }
+		ObstacleController obstacle = col.gameObject.GetComponent<ObstacleController> ();
+        if (car) {
+			switch (projectileType) {
+			case ProjType.Green:
+				car.Damage (damage);
+				car.rigidbody.AddForce ((Random.onUnitSphere + Vector3.up * 1.5f).normalized * force);
+				Destroy (gameObject);
+				if (deathPrefab) {
+					var fx = Instantiate (deathPrefab, transform.position, transform.rotation);
+					Destroy (fx, 20f);
+				}
+				break;
+			case ProjType.Red:
+				if (car != source) {
+					car.Damage (damage);
+					car.rigidbody.AddForce ((Random.onUnitSphere + Vector3.up * 1.5f).normalized * force);
+					Destroy (gameObject);
+					if (deathPrefab) {
+						var fx = Instantiate (deathPrefab, transform.position, transform.rotation);
+						Destroy (fx, 20f);
+					}
+				}
+				break;
+			case ProjType.Blue:
+				if (car != source) {
+					car.Damage (damage);
+					car.rigidbody.AddForce ((Random.onUnitSphere + Vector3.up * 1.5f).normalized * force);
+					if (car == target) {
+						Destroy (gameObject);
+					}
+					if (deathPrefab) {
+						var fx = Instantiate (deathPrefab, transform.position, transform.rotation);
+						Destroy (fx, 20f);
+					}
+				}
+				break;
+			default:
+				break;
+			}
+		} 
+		else if (obstacle) 
+		{
+			obstacle.Damage(damage);
+			Destroy(gameObject);
+		}
         else
         {
             nbBounce--;
