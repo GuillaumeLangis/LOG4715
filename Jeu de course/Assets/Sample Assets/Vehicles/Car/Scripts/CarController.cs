@@ -456,7 +456,7 @@ public class CarController : MonoBehaviour
 			Debug.Log (distanceToNextCar.ToString());
 
 			if(distanceToNextCar < 1000)
-				return 1.0f + distanceToNextCar/2000;
+				return 1.0f + (distanceToNextCar/2000) * rubberbandMultiplier;
 
 			else return 1.5f;
 		}
