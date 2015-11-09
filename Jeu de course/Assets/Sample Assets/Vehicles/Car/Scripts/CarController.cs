@@ -167,6 +167,31 @@ public class CarController : MonoBehaviour
         }
     }               
 
+    [Header("Rubberbanding")]
+    [SerializeField] float minDistance = 150f;
+    [SerializeField] float maxDistance = 2000f;
+    [SerializeField] float maxRubberbandBonus = 2f;
+    float CalculateRubberBanding()
+    {
+        if (checkpointManager)
+        {
+            CarController nextCar = checkpointManager.GetNextCar(this);
+
+            if (nextCar)
+            {
+                float distanceToNextCar = Vector3.Distance(rigidbody.worldCenterOfMass, nextCar.rigidbody.worldCenterOfMass);
+                // Debug.Log(distanceToNextCar.ToString());
+
+                if (distanceToNextCar > minDistance)
+                    return Mathf.Lerp(1f, maxRubberbandBonus, distanceToNextCar / maxDistance);
+                else return 1f;
+            }
+        }
+        
+
+        return 1f;
+    }
+
     [System.Serializable]
     public class Advanced                                                           // the advanced settings for the car controller
     {
@@ -222,6 +247,7 @@ public class CarController : MonoBehaviour
             float val = maxSpeed;
 
 			val *= boostFactor;
+            val *= CalculateRubberBanding();
 
             val *= Mathf.Lerp(minHealthMaxSpeedFactor, 1f, health);
             if (useNitro && nitroLeft > 0)
@@ -239,6 +265,7 @@ public class CarController : MonoBehaviour
             float val = maxTorque;
 
 			val *= boostFactor;
+            val *= CalculateRubberBanding();
 
             // val *= Mathf.Lerp(minHealthMaxSpeedFactor, 1f, health);
             if (useNitro && nitroLeft > 0)
@@ -396,7 +423,18 @@ public class CarController : MonoBehaviour
             col.relativeVelocity.magnitude > carCollisionRelativeVelocityThreshold)
         {
             Damage(damagePerCarCollision);
+
+            if (col.gameObject.GetComponentInParent<ObstacleController>())
+            {
+                col.gameObject.GetComponentInParent<ObstacleController>().Damage(0.5f);
+            }
         }
+    }
+    public void Reposition()
+    {
+        checkpointManager.Reposition(this);
+        rigidbody.velocity = Vector3.zero;
+        transform.rotation = Quaternion.identity;
     }
 
 	void ConvertInputToAccelerationAndBraking (float accelBrakeInput)
@@ -411,7 +449,7 @@ public class CarController : MonoBehaviour
 		if (accelBrakeInput > 0) {
 			if (CurrentSpeed > -smallSpeed) {
 				// pressing forward while moving forward : accelerate!
-				targetAccelInput = accelBrakeInput * CalculateRubberBanding();
+				targetAccelInput = accelBrakeInput;
 				BrakeInput = 0;
 			}
 			else {
@@ -444,24 +482,6 @@ public class CarController : MonoBehaviour
 		// speedfactor is a normalized representation of speed in relation to max speed:
 		SpeedFactor = Mathf.InverseLerp (0, reversing ? maxReversingSpeed : MaxSpeed, Mathf.Abs (CurrentSpeed));
 		curvedSpeedFactor = reversing ? 0 : CurveFactor (SpeedFactor);
-	}
-
-	float CalculateRubberBanding()
-	{
-		CarController nextCar = checkpointManager.GetNextCar (this); 
-
-		if (nextCar) 
-		{ 			
-			float distanceToNextCar = Vector3.Distance (rigidbody.worldCenterOfMass, nextCar.rigidbody.worldCenterOfMass);
-			Debug.Log (distanceToNextCar.ToString());
-
-			if(distanceToNextCar < 1000)
-				return 1.0f + (distanceToNextCar/2000) * rubberbandMultiplier;
-
-			else return 1.5f;
-		}
-
-		return 1.0f;
 	}
 
 	void HandleGearChanging ()

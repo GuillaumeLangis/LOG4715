@@ -14,7 +14,20 @@ public class CarUserControlMP : MonoBehaviour
     [SerializeField]
     private string roll = "Roll";
 
+    [SerializeField]
+    private string jumpInput = "Jump";
+
+    [SerializeField]
+    private string fireInput = "Fire1";
+
+    [SerializeField]
+    private string reposInput = "Fire3";
+
+    [SerializeField]
+    private string nitroInput = "Fire2";
+
     bool jump = false;
+    bool repos = false;
 	
 	void Awake ()
 	{
@@ -24,13 +37,16 @@ public class CarUserControlMP : MonoBehaviour
 
     void Update()
     {
-        if (CrossPlatformInput.GetButtonDown("Fire1"))
+        if (CrossPlatformInput.GetButtonDown(fireInput))
         {
             car.LaunchProjectile();
         }
 
         if (!jump)
-            jump = CrossPlatformInput.GetButtonDown("Jump");
+            jump = CrossPlatformInput.GetButtonDown(jumpInput);
+
+        if (!repos)
+            repos = CrossPlatformInput.GetButtonDown(reposInput);
     }
 
     void FixedUpdate()
@@ -40,11 +56,17 @@ public class CarUserControlMP : MonoBehaviour
 		float h = CrossPlatformInput.GetAxis(horizontal);
 		float v = CrossPlatformInput.GetAxis(vertical);
         float r = CrossPlatformInput.GetAxis(roll);
-        car.useNitro = CrossPlatformInput.GetButton("Fire2");
+        car.useNitro = CrossPlatformInput.GetButton(nitroInput);
         if (jump)
         {
             car.Jump();
             jump = false;
+        }
+
+        if (repos)
+        {
+            car.Reposition();
+            repos = false;
         }
         #else
 		float h = Input.GetAxis(horizontal);

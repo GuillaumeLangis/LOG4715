@@ -47,6 +47,14 @@ public class CheckpointManager : MonoBehaviour
         OrderCars();
         return orderedCars[0];
     }
+    public void Reposition(CarController car)
+    {
+        PositionData data = _carPositions[car];
+        if (data != null)
+        {
+            car.transform.position = checkPointRoot.transform.GetChild(data.checkPoint).position + Vector3.up * 2f;
+        }
+    }
 
 	private class PositionData
 	{
