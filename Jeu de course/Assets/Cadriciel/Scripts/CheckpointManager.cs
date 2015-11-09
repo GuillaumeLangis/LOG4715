@@ -53,6 +53,7 @@ public class CheckpointManager : MonoBehaviour
         if (data != null)
         {
             car.transform.position = checkPointRoot.transform.GetChild(data.checkPoint).position + Vector3.up * 2f;
+            car.Damage(1f);
         }
     }
 
