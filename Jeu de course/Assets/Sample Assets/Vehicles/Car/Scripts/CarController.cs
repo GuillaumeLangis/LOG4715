@@ -423,11 +423,12 @@ public class CarController : MonoBehaviour
             col.relativeVelocity.magnitude > carCollisionRelativeVelocityThreshold)
         {
             Damage(damagePerCarCollision);
+        }
 
-            if (col.gameObject.GetComponentInParent<ObstacleController>())
-            {
-                col.gameObject.GetComponentInParent<ObstacleController>().Damage(0.5f);
-            }
+        if (col.gameObject.GetComponentInParent<ObstacleController>())
+        {
+            Damage(1f);
+            col.gameObject.GetComponentInParent<ObstacleController>().Damage(2f);
         }
     }
     public void Reposition()

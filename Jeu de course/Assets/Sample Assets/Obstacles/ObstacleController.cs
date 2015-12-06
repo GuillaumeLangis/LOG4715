@@ -14,6 +14,7 @@ using System.Collections;
 public class ObstacleController : MonoBehaviour
 {
 	[SerializeField] [Range(0f, 1f)] float _health =  1f;
+    public GameObject deathFX;
 
 	public float health
 	{
@@ -31,6 +32,8 @@ public class ObstacleController : MonoBehaviour
 	void Update()
 	{
 		if (health <= 0f) {
+            var fx = Instantiate(deathFX, transform.position, transform.rotation) as GameObject;
+            Destroy(fx.gameObject, 20.0f);
 			Destroy(gameObject);
 		}
 	}
