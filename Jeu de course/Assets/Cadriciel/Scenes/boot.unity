@@ -12252,7 +12252,7 @@ GUIText:
   m_GameObject: {fileID: 1119846869}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: Appuyez Espace pour commencer
+  m_Text: Press space to start
   m_Anchor: 4
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}
@@ -14717,7 +14717,7 @@ GUIText:
   m_GameObject: {fileID: 1200897201}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: Prototype de jeu de course
+  m_Text: 'Volcano : The Game'
   m_Anchor: 4
   m_Alignment: 0
   m_PixelOffset: {x: 0, y: 0}

@@ -1848,7 +1848,7 @@ ParticleSystem:
     enabled: 0
     multiplier: 1
   ClampVelocityModule:
-    enabled: 1
+    enabled: 0
     x:
       scalar: 2
       maxCurve:
@@ -2870,7 +2870,7 @@ ParticleSystem:
     enabled: 0
     multiplier: 1
   ClampVelocityModule:
-    enabled: 1
+    enabled: 0
     x:
       scalar: 1
       maxCurve:
