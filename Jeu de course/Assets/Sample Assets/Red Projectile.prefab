@@ -197,10 +197,13 @@ MonoBehaviour:
   _projectileType: 1
   source: {fileID: 0}
   target: {fileID: 0}
-  speed: 50
+  wptTgt: {fileID: 0}
+  speed: 300
   damage: .25
   force: 1000
   nbBounce: 1
+  distToWaypoint: 0
+  distToTarget: 0
   deathPrefab: {fileID: 100720, guid: 85d9bf8df6e86264890452bbdcbddd86, type: 2}
 --- !u!135 &13506828
 SphereCollider:

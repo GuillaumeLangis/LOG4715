@@ -198,7 +198,7 @@ MonoBehaviour:
   source: {fileID: 0}
   target: {fileID: 0}
   wptTgt: {fileID: 0}
-  speed: 50
+  speed: 300
   damage: .25
   force: 1000
   nbBounce: 3
