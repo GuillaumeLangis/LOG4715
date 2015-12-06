@@ -9,7 +9,7 @@ public class EndGameScreen : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rankings = GetComponent<Text> ();
-		rankings.text = "RANKINGS\n\n";
+		// rankings.text = "RANKINGS\n\n";
 
 		int playerCount = PlayerPrefs.GetInt ("PlayerCount");
 
@@ -18,8 +18,8 @@ public class EndGameScreen : MonoBehaviour {
 		}
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+	public void PlayAgain()
+    {
+        Application.LoadLevel("course");
+    }
 }
