@@ -106,6 +106,13 @@ public class CheckpointManager : MonoBehaviour
 
 					if (carData.lap >= _totalLaps)
 					{
+						OrderCars();
+						for(int i = 0; i < orderedCars.Count; ++i)
+						{
+							PlayerPrefs.SetString ("position " + i.ToString(), orderedCars[i].name);
+							PlayerPrefs.SetInt ("PlayerCount", i + 1);
+						}
+
 						_finished = true;
 						GetComponent<RaceManager>().EndRace(car.name.ToLower());
 					}
